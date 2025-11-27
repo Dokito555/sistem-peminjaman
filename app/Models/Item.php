@@ -21,4 +21,8 @@ class Item extends Model {
         'quantity' => 'integer',
         'available_quantity' => 'integer'
     ];
+
+    public function peminjaman(){
+        return $this->hasMany(Peminjaman::class);
+    }
 }
