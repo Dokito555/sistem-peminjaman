@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Peminjaman extends Model
 {
+    protected $table = 'peminjaman';
+    
     protected $fillable = [
         'guru_id',
         'item_id',
