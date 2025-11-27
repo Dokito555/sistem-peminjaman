@@ -27,3 +27,5 @@ Route::middleware('auth')->group(function () {
     // /items/{id}/edit
     Route::resource('items', ItemController::class);
 });
+Route::get('/list-peminjaman-barang', [ItemController::class, 'listPeminjaman'])
+    ->name('list.peminjaman');

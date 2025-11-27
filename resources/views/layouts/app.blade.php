@@ -26,8 +26,8 @@
         <a href="{{ route('dashboard') }}">Dashboard</a>
     </li>
 
-    <li class="{{ request()->routeIs('peminjaman.index') ? 'active' : '' }}">
-        <a href="#">List Peminjaman Barang</a>
+    <li class="{{ request()->routeIs('list.peminjaman') ? 'active' : '' }}">
+        <a href="{{ route('list.peminjaman') }}">List Peminjaman Barang</a>
     </li>
 
     <li class="{{ request()->routeIs('barang.index') ? 'active' : '' }}">

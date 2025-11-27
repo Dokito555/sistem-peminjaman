@@ -25,4 +25,9 @@ class Item extends Model {
     public function peminjaman(){
         return $this->hasMany(Peminjaman::class);
     }
+    
+    public function peminjamanAktif()
+    {
+        return $this->hasOne(Peminjaman::class);
+    }
 }

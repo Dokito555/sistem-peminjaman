@@ -39,9 +39,14 @@ class ItemController extends Controller {
     public function show(Item $item) {
         return view('items.show', compact('item'));
     }
+    
+    public function listPeminjaman(){
+        $items = Item::with('peminjamanAktif')->paginate(10);;
+        return view('items.list-peminjaman', compact('items'));
+    }
 
     public function update(Request $request, Item $item) {
-       $request->validate([
+        $request->validate([
             'name' => 'required|string|max:255',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'description' => 'nullable|string',
